@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <style>
+
+        img {
+            max-width: 100%;
+        }
+        .corHeader{
+            background-color: #60afd1b7;
+            padding-top: 25px;
+}
+        .pesquisar {
+            background-color: white;
+            width: 350px;
+            height: 35px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+}
+        .pesquisa{
+           border: none;
+           outline: none;
+}
+         nav {
+            border-bottom: 1px solid black;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+        /*!* Cor Main**/
+        .tudo{
+            background-image: url("/img/baner.png");
+            background-size: contain;
+            height: 20vw;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: bottom;
+            background-color: #c6e3f0;
+            gap: 40px;
+            border-bottom: 1px solid black;
+         }
+        .f1{
+            border: none;
+            outline: none;
+            background: transparent;
+
+        }
+        .f2{
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .f3{
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .ofertas{
+            border-bottom: 1px solid black;
+            background: #daf1fb;
+            height: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #daf1fb;
+            flex-direction: column;
+            gap: 40px;
+            /*width: 100%;*/
+        }
+        .coisas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 32px;
+        }
+        .f4{
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .textinho{
+            text-align: center;
+        }
+        .produtos {
+            border-bottom: 1px solid black;
+            background: #daf1fb;
+            height: auto;
+            text-align: center;
+            padding-bottom: 42px;
+        }
+        .produtin{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .prodts{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .f5{
+            border: none;
+            background: transparent;
+            width: 100%;
+        }
+        .pdts{
+            padding-bottom: 35px;
+            padding-top: 32px;
+        }
+        .dicas{
+            border-bottom: 1px solid black;
+            background: #daf1fb;
+            height: auto;
+            gap: 50px;
+            text-align: center;
+        }
+        .dica{
+            padding-bottom: 35px;
+            padding-top: 32px;
+        }
+        .sobre{
+            /*border-bottom: 1px solid black;*/
+
+            height: auto;
+            text-align: center;
+            /*padding: 80px 0px 0px 90px;*/
+            width: 500px;
+        }
+        .ctts{
+            border-bottom: 1px solid black;
+            background: #daf1fb;
+            height: auto;
+            text-align: center;
+            /*padding-bottom: 42px;*/
+            width: 400px;
+            padding: 30px;
+
+        }
+        .gridinha{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #daf1fb;
+            justify-items: center;
+            align-items: center;
+        }
+
+/*------Responsivo-----------------------------------------------------------------------------------------------------------------------*/
+
+        @media (max-width: 800px){
+            .gridinha {
+                display: flex;
+                grid-template-columns: 1fr;
+                background: #daf1fb;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tudo{
+                display: none;
+            }
+            .textinho{
+                display: none;
+            }
+
+        }
+        @media (max-width: 600px) {
+            .pesquisar{
+                display: none;
+            }
+            .tudo{
+                display: none;
+            }
+            .textinho{
+                display: none;
+            }
+            .f4{
+                width: 180px;
+            }
+            .f5{
+                width: 180px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 500px) {
+            .ofertas{
+                display: none;
+            }
+            .dicas{
+                width: 467px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 499px){
+            .dicas{
+                display: none;
+            }
+            .sobre{
+                display: none;
+            }
+        }
+
+    </style>
+<!-------header------------------------------------------------------------------------------------------------------------------------ -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg corHeader">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" style="width: 40px;" alt="Logo" />
+                <strong style="width: 40px;">Mundo Pets</strong>
+            </a>
+            <div class="pesquisar">
+                <img src="img/pesquisar.png" alt="">
+                <input class="pesquisa" type="text" name="pesquisa" id="barra" required="" minlength="1" maxlength="400" placeholder="Buscar mais produtos...">
+                <img src="img/microfone.png" alt="">
+                <img src="img/camera.png" alt="">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">Ínicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#produtos">Contatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contatos">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://wa.me/5518935007007">
+                            <button class="btn btn-success"
+                                style="border-radius: 20px; background-color: #d40b0b; border-color: #f80c0c;">
+                                Agente seu atendimento
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--------main------------------------------------------------------------->
+    <div class="container-fluid-main">
+        <div class="col-sm-12">
+            <div class="tudo">
+                <button class="f1"><img src="img/consult.png" style="width: 140px;">
+                    <p>Consultas tem casa</p>
+                </button>
+<!---------------------------------------------------------------main------------------------------------------------------------->
+                <button class="f2"><img src="img/medico.png" style="width: 161px;">
+                    <p>Médicos Especializados</p>
+                </button>
+<!---------------------------------------------------------------------------------------------------------------------------->
+                <button class="f3"><img src="img/suport.png" style="width: 182px;">
+                    <p>Suporte ao paciente</p>
+                </button>
+            </div>
+            <div class="ofertas">
+                <div class="col-sm-12">
+                    <div class="img">
+                       <div class="textinho">
+                           <h1>APROVEITE JÁ</h1>
+                           <h2>OFERTAS ESPECIAIS</h2>
+                       </div>
+
+                       <div class="coisas">
+                           <div>
+                               <img src="img/briquedo.png" style="width: 170px;">
+                               <p>Brinquedos </br> R$ 24,99 </p>
+                           </div>
+
+                           <div>
+                               <img src="img/roupa.png" style="width: 190px;">
+                               <p>Roupinha </br> R$ 15,90 </p>
+                           </div>
+
+                           <div>
+                               <img src="img/petiscos.png" style="width: 170px;">
+                               <p>Petiscos </br> R$ 19,99</p>
+                           </div>
+
+                           <div>
+                               <img src="img/comedouro.png" style="width: 190px;">
+                               <p>Comedouro </br> R$ 45,90</p>
+                               <p></p>
+                           </div>
+
+                           <div>
+                               <img src="img/racao.png" style="width: 170px;">
+                               <p>Ração </br> R$ 49,99</p>
+                           </div>
+                       </div>
+                    </div>
+
+                   <button class="f4"><img src="img/button.png" style="width: 250px;"></button>
+                </div>
+            </div>
+            <div class="produtos">
+                <h1 class="pdts">Produtos da loja</h1>
+
+                <div class="produtin">
+                    <div class="prodts">
+                        <div>
+                            <img src="img/capa.png">
+                        </div>
+                        <div>
+                            <img src="img/perfumes.png">
+                        </div>
+                        <div>
+                            <img src="img/coleira.png">
+                        </div>
+                        <div>
+                            <img src="img/banho.png">
+                        </div>
+                    </div>
+                    <button class="f5"><img src="img/botao.png" style="width: 250px;"></button>
+                </div>
+            </div>
+            <div class="dicas">
+                <h1 class="dica">Dicas de cuidado</h1>
+                <div>
+                    <div>
+                        <p> 1. Mantenha uma dieta equilibrada e adequada para o seu animal de estimação.</p>
+                    </div>
+                    <div>
+                        <p> 2. Proporcione exercícios regulares para manter seu animal de estimação ativo e saudável.</p>
+                    </div>
+                    <div>
+                        <p> 3. Certifique-se de que seu animal de estimação tenha água fresca e limpa disponível o tempo todo.</p>
+                    </div>
+                    <img src="img/patinhazinha.png">
+                    <div>
+                        <p> 4. Agende consultas regulares com um veterinário para garantir que seu animal esteja em boas condições de saúde</p>
+                    </div>
+                    <div>
+                        <p> 5. Mantenha a higiene do seu animal de estimação, incluindo banhos regulares e cuidados dentários</p>
+                    </div>
+                    <div>
+                       <p> 6. Dê amor, carinho e atenção ao seu animal de estimação todos os dias para promover seu bem-estar emocional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gridinha">
+                <div class="sobre">
+                    <h2>Sobre nós</h2>
+                    <p>O Mundo Pets é uma loja dedicada ao bem-estar de animais de estimação. Oferecemos produtos de
+                        alta qualidade, serviços de grooming e orientação especializada.
+                    Além disso, promovemos uma comunidade apaixonada por pets. Venha fazer parte da nossa família de  Mundo Pets e cuide do bem-estar dos seus animais com a gente.</p>
+                </div>
+                <div class="ctts">
+                    <img src="img/ctts.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
